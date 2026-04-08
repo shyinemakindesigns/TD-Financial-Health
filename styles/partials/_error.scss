@@ -1,0 +1,40 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.error {
+    background-color: $color-brand-tertiary;
+        &__wrapper {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 1000px;
+        }
+        &__card {
+            background-color: $color-neutral-white;
+            width: 100%;
+            max-width: 48rem;
+            padding: 5.156rem 9.375rem;
+            border-radius: 0.25rem;
+            display: flex;
+            flex-direction: column;
+            margin: 2.5rem auto;
+            text-align: center;
+            @include mobile {
+                padding: 5.156rem 2rem;
+            }
+        }
+        &__icon {
+            width: 5rem;
+            margin: 0 auto;
+            fill: $color-brand-tertiary;
+        }
+        &__title{
+            color: $color-brand-secondary;
+            font-weight: bold;
+            font-size: 1.375rem;
+        }
+        &__message{
+            color: $color-neutral-300;
+            font-size: 1rem;
+        }
+        }

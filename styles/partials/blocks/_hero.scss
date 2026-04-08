@@ -1,0 +1,87 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero {
+    background-image: url('/assets/images/Hero.jpg');
+    background-size: cover;
+    background-position: center;
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        height: 40.9375rem;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $color-neutral-white;
+        @include mobile {
+            width: 300px;
+        }
+        &-title {
+            font-size: 4rem;
+            margin: 0 auto;
+            height: 4.8125rem;
+            @include mobile {
+                font-size: 3rem;
+                text-align: center;
+                height: auto;
+            }
+        }
+        &-description {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin: 0 auto;
+            padding-top: 1rem;
+        }
+    }
+    &__button {
+        &-wrapper {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 1.875rem;
+            font-weight: 700;
+            padding-top: 3.125rem;
+            @include mobile {
+                flex-direction: column;
+                width: 200px;
+                max-width: 100%;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+        &-green {
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.0625rem;
+            height: 3.5rem;
+            color: $color-neutral-white;
+            background-color: #008a00;;
+            border-radius: 0.5rem;
+            padding: 1rem 2rem;
+            &:hover {
+                background-color: $color-brand-tertiary;
+            } 
+        }
+        &-white {
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.0625rem;
+            height: 3.5rem;
+            color: #008a00;
+            background-color: $color-neutral-white;
+            border-radius: 0.5rem;
+            padding: 1rem 2rem;
+            border: 2px #008a00 solid;
+            &:hover {
+                background-color: #ebebeb;
+            }
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+  <script src="../scripts/APIkey.js" defer></script>
+  <script src="../scripts/form-handler.js" defer></script>
+  <script src="../scripts/header.js" defer></script>
+  <script src="../scripts/error.js" defer></script>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <title>Join Form Page</title>
+</head>
+
+<body>
+
+  <header class="site-header">
+        <div class="site-header__greenbar"></div>
+            <div class="site-header__wrapper">
+            <!-- Mobile menu toggle button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="mobile-menu-toggle__bar"></span>
+                <span class="mobile-menu-toggle__bar"></span>
+                <span class="mobile-menu-toggle__bar"></span>
+            </button>
+        
+            <nav class="primary-nav">
+                <ul class="primary-nav__list">
+                <li class="primary-nav__item">
+                    <a class="primary-nav__link" href="../landing-page.html">TD Financial Health</a>
+                </li>
+                <li class="primary-nav__item">
+                    <a class="primary-nav__link" href="../features/features.html">Features</a>
+                </li>
+                <li class="primary-nav__item">
+                    <a class="primary-nav__link" href="../join/join.html">Sign Up</a>
+                </li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+
+  <section class="join__section">
+    <div class="join__content">
+      <h1 class="join__header">Join the <br>TD Financial Health<br> Beta Program</h1>
+      <p class="join__desc">Be among the first to experience TD's new Financial Health platform - and help shape the
+        future of smarter, healthier money management.</p>
+    </div>
+
+    <form id="signupForm" class="join__form">
+      <label for="firstName" class="join__form__label">First Name</label><br>
+      <input type="text" id="firstName" name="firstName" class="join__form__input" required><br><br>
+      <span id="firstNameError" class="error-message"></span>
+
+      <label for="lastName" class="join__form__label">Last Name</label><br>
+      <input type="text" id="lastName" name="lastName" class="join__form__input" required><br><br>
+      <span id="lastNameError" class="error-message"></span>
+
+      <label for="email" class="join__form__label">Email</label><br>
+      <input type="email" id="email" name="email" class="join__form__input" required><br><br>
+      <span id="emailError" class="error-message"></span>
+
+      <div class="join__form__security">
+         <img src="../assets/icons/checkmark-grey.svg" alt="Secure locked icon" class="join__form__security-icon" />
+        <p class="join__form__security-text">
+          TD will never ask for your password or banking information on this form.
+        </p>
+      </div>
+
+      <div class="join__form__encryption">
+        <img src="../assets/icons/locked-grey.svg" alt="Secure locked icon" class="join__form__encryption-icon" />
+        <p class="join__form__encryption-text">
+          Your information is encrypted and secure.
+        </p>
+      </div>
+
+
+      <div class="join__form__consent">
+        <input type="checkbox" id="consentCheckbox" class="join__form__checkbox" required>
+        <label for="consentCheckbox" class="join__form__consent-label">
+          I agree to TD’s
+          <a href="https://www.td.com/ca/en/about-td/privacy-and-security/our-privacy-commitments" target="_blank" class="join__form__consent__privacylink" >
+            privacy policy
+          </a>
+          and consent to be contacted about TD’s Financial Health Program.
+        </label>
+      </div>
+      <button type="submit" class="join__form__button">Sign Up</button>
+    </form>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__links">
+        <ul class="footer__list">
+          <li class="footer__list__item">
+            <a href="../landing-page.html" class="footer__link">TD Financial Health</a>
+          </li>
+          <li class="footer__list__item">
+            <a href="../features/features.html" class="footer__link">Features</a>
+          </li>
+          <li class="footer__list__item">
+            <a href="../join/join.html" class="footer__link">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+
+      <p class="footer__disclaimer">
+        Disclaimer: This project is for educational purposes only as part of the BrainStation Industry Project with TD.
+        It is not an official TD product or feature, and is not affiliated with or endorsed by TD beyond this learning
+        collaboration.
+      </p>
+
+      <div class="footer__divider"></div>
+
+      <div class="footer__social">
+        <ul class="footer__social__list">
+          <li class="footer__social__item">
+            <a href="https://www.linkedin.com/company/td/" target="_blank" rel="noopener noreferrer"
+              class="footer__social__icon">
+              <img class="footer__social__img" src="../assets/icons/linkedin.svg" alt="LinkedIn" />
+            </a>
+          </li>
+          <li class="footer__social__item">
+            <a href="https://www.facebook.com/TDCanada/" target="_blank" rel="noopener noreferrer"
+              class="footer__social__icon">
+              <img class="footer__social__img" src="../assets/icons/facebook.svg" alt="Facebook" />
+            </a>
+          </li>
+          <li class="footer__social__item">
+            <a href="https://www.instagram.com/td_canada/?hl=en" target="_blank" rel="noopener noreferrer"
+              class="footer__social__icon">
+              <img class="footer__social__img" src="../assets/icons/instagram.svg" alt="Instagram" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- Elfsight AI Chatbot | TD Financial Health Beta -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-f03110a2-f17d-4978-9c8c-74b84dfca42c" data-elfsight-app-lazy></div>
+</body>
+
+</html>

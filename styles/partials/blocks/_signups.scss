@@ -1,0 +1,121 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 3.125rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.header-Mini_Title {
+  color: $color-neutral-300;
+  font-size: 1.25rem;
+
+  @include mobile {
+    font-size: 1rem;
+  }
+
+}
+
+.header-Large {
+  color: $color-neutral-900;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 80%;
+  text-align: center;
+
+  @include mobile {
+    font-size: 1.7rem;
+  }
+
+  @include tablet {
+    font-size: 3rem;
+  }
+
+  @include desktop {
+    font-size: 4rem;
+  }
+}
+
+.userTable {
+  width: 80%;
+  margin: 3rem auto 5rem auto;
+  padding-top: 0.0625rem;
+}
+
+.userTable__Row {
+  background-color: $color-brand-tertiary;
+  // width: 100%;
+  display: flex;
+  //justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 3rem;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+
+  @include mobile {
+    padding: 0.5rem;
+  }
+}
+
+.first_Name,
+.last_Name,
+.email {
+
+
+  flex: 1;
+  text-align: left;
+  max-width: 30%;
+
+  @include mobile {
+    font-size: 0.75rem;
+  }
+}
+
+.last_Name {
+  @include desktop {
+    margin-right: 10rem;
+  }
+}
+
+.email {
+  box-sizing: border-box;
+
+  @include mobile {
+    max-width: 40%;
+    overflow-wrap: break-word;
+  }
+}
+
+.userTable {
+  .userTable__Row {
+    color: $color-neutral-white; // default text color for all rows
+    height: 4.1875rem;
+
+    // Style for the first row specifically
+    &:first-child {
+      background-color: $color-brand-tertiary;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      }
+    
+
+    // Alternate row styles starting from the second row
+    &:nth-child(even):not(:first-child) {
+      background-color: $color-neutral-100; // even rows (2,4,6...)
+      color: $color-neutral-900;
+    }
+
+    &:nth-child(odd):not(:first-child) {
+      background-color: $color-neutral-white; // odd rows (3,5,7...)
+      color: $color-neutral-900;
+    }
+  }
+}

@@ -1,0 +1,424 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.products {
+    width: 100%;
+    background: $color-neutral-white;
+
+    &__wrapper {
+        max-width: 100%;   
+        max-width: 72rem;       
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tablet {
+            padding: 3rem 1.5rem; 
+        }
+
+        @include desktop {
+            padding: 5rem 0 5rem;
+            max-width: 75rem;
+        }
+    }
+    
+    &__intro {
+        text-align: center;
+        margin-bottom: 2rem;
+        max-width: 100%;
+
+        @include tablet {
+            margin-bottom: 2.5rem;
+            max-width: 50rem;
+        }
+
+        @include desktop {
+            margin-bottom: 3rem;
+            max-width: 60rem;
+        }
+    }
+
+    &__title {
+        font-size: 2.75rem;
+        font-weight: 700;
+        color: $color-neutral-900;
+        line-height: 1.2;
+        letter-spacing: 0.2px;
+        text-transform: none;       
+        margin: 0 0 1rem;
+
+        @include tablet {
+            font-size: 3rem;
+            margin: 0 0 1.5rem;
+        }
+
+        @include desktop {
+            font-size: 3rem;
+            margin: 0 0 2rem;
+        }
+    }
+    
+    &__subtitle {
+        margin: 0 auto;
+        max-width: 100%;
+        color: $color-neutral-300;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: 0.2px;
+
+        @include tablet {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            max-width: 100%;
+        }
+
+        @include desktop {
+            font-size: 1.25rem;
+            line-height: 2rem;
+            max-width: 85%;
+        }
+    
+        &--secondary {
+            margin-top: 0.75rem;
+        }
+    }
+
+    /* STATUS TEXT (loading / error / empty) */
+    &__status {
+        text-align: center;
+        font-size: 0.95rem;
+        color: $color-neutral-300;
+        margin-top: 1.5rem;
+    
+        &--error {
+            color: $color-neutral-black;
+        }
+    }
+    
+    /* CARD LIST */
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        max-width: 100%;
+
+        @include tablet {
+            gap: 2.5rem;
+        }
+
+        @include desktop {
+            gap: 3rem;
+            max-width: 72rem;
+            margin: 0 auto;
+        }
+    }
+    
+    /* INDIVIDUAL CARD */
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        background-color: $color-neutral-white;
+
+        @include tablet {
+            gap: 2rem;
+            padding: 1.5rem 1.5rem;
+        }
+
+        @include desktop {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 3rem;
+            padding: 2rem 0;
+        }
+    }
+
+    &__card--reverse {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        @include tablet {
+            flex-direction: column;
+            padding: 1.5rem 1.5rem;
+        }
+
+        @include desktop {
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            gap: 3rem;
+        }
+    }
+    
+    &__card-media {
+        flex: 0 0 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+
+        @include desktop {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+    
+    &__card-image {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        object-fit: cover;
+        
+    }
+    
+    &__card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+
+        @include tablet {
+            gap: 1rem;
+        }
+
+        @include desktop {
+            gap: 1rem;
+            flex: 0 0 45%;
+            max-width: 50%;
+        }
+    }
+    
+    &__card-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $color-neutral-900;
+        margin: 0;
+
+        @include tablet {
+            font-size: 2rem;
+        }
+
+        @include desktop {
+            font-size: 2rem;
+        }
+    }
+    
+    &__card-text {
+        color: $color-neutral-300;
+        margin: 0;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.75; /* 140% */
+        letter-spacing: 0.0125rem;
+
+        @include tablet {
+            font-size: 1.25rem;
+        }
+
+        @include desktop {
+            font-size: 1.25rem;
+            line-height: 1.6;
+        }
+    }
+    
+    &__card-list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 0.5rem;
+        color: $color-neutral-300;
+        font-weight: 400;
+    }
+    
+    &__card-bullet {
+        position: relative;
+        padding-left: 1.25rem;
+        color: $color-neutral-300;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.0125rem;
+
+        @include tablet {
+            font-size: 1.25rem;
+        }
+
+        @include desktop {
+            font-size: 1.25rem;
+        }
+    
+        &::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: $color-neutral-300;
+        }
+    }
+    
+    &__card-cta {
+        margin-top: 0.5rem;
+        align-self: flex-start;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.625rem 1.25rem;
+        background-color: $color-neutral-white;
+        color: $color-neutral-900;
+        font-size: 0.875rem;
+        border: 1px solid $color-neutral-300;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        @include tablet {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.9375rem;
+        }
+
+        @include desktop {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+        }
+    
+        &:hover {
+            border-color: $color-brand-tertiary;
+            color: $color-brand-tertiary;
+        }
+    }
+    
+    &__retry {
+        margin-top: 1rem;
+        padding: 0.625rem 1.25rem;
+        border-radius: 0.5rem;
+        background-color: $color-brand-tertiary;
+        color: $color-neutral-white;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 0.9375rem;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: $color-brand-secondary;
+        }
+    }
+}
+
+.banner {
+    &__header {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 5rem 0;
+        background-color: $color-neutral-100;
+        &-phrase {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $color-neutral-300;
+            margin: 0 auto;
+            padding-bottom: 1rem;
+            @include tablet {
+                font-size: 1rem;
+            }
+            @include mobile {
+                font-size: 1rem;
+            }
+        }
+        &-title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: $color-neutral-900;
+            letter-spacing: 0.0125rem;
+            margin: 0 auto;
+            padding-bottom: 1rem;
+            @include tablet {
+                font-size: 2.5rem;
+            }
+            @include mobile {
+                width: 19.375rem;
+                font-size: 2rem;
+            }
+        }
+        &-description {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: $color-neutral-300;
+            letter-spacing: 0.2px;
+            margin: 0 auto;
+            max-width: 100%;
+            width: 56.25rem;
+            @include tablet {
+                width: 43.75rem;
+                font-size: 1rem;
+            }
+            @include mobile {
+                width:18.125rem;
+                font-size: 1rem;
+                height: 6.25rem;
+            }
+        }
+    }
+    &__button {
+        &-wrapper {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 1.875rem;
+            font-weight: 700;
+            padding-top: 3.125rem;
+            @include tablet {
+                padding-top: 1.875rem;
+            }
+            @include mobile {
+                flex-direction: column;
+                width: 12.5rem;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+        &-green {
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.0625rem;
+            height: 3.5rem;
+            color: $color-neutral-white;
+            background-color: #008a00;
+            border-radius: 0.5rem;
+            padding: 1rem 2rem;
+            &:hover {
+                background-color: $color-brand-tertiary;
+            } 
+        }
+        &-white {
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.0625rem;
+            height: 3.5rem;
+            color: #008a00;
+            background-color: $color-neutral-white;
+            border-radius: 0.5rem;
+            padding: 1rem 2rem;
+            border: 2px #008a00 solid;
+            &:hover {
+                background-color: #ebebeb;
+        }
+    }   
+}
+}

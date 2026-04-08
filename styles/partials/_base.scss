@@ -1,0 +1,26 @@
+@use "./variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: $color-neutral-white;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-inter;
+  line-height: 1.45;
+  background: $color-neutral-white;
+}
+
+img {
+  max-width: 100%;
+}
+
+.text-bold {
+  font-weight: 700;
+}
